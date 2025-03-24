@@ -74,9 +74,17 @@ WSGI_APPLICATION = 'ecommerce_product_api.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_api_ecommerce',
+        'USER': 'root',
+        'PASSWORD': 'ITServ32$',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  # Helps prevent SQL injection
+        }
     }
 }
 
