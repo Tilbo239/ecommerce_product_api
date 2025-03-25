@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  # Django REST framework
     'rest_framework_simplejwt',# Django REST framework Simple JWT
-    'users',
+    'users', # The users app
+    'products', # he products apps
 
 ]
 
