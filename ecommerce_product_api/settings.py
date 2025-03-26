@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',# Django REST framework Simple JWT
     'users', # The users app
     'products', # he products apps
+    'reviews', # The reviews app
 
 ]
 
