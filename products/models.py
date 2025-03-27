@@ -1,7 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 from django.conf import settings
-# from django.utils import timezone
 from discount.models import Discount
 
 
@@ -59,23 +58,6 @@ class Product(models.Model):
             return self.price - (self.price * (self.discount.percentage / 100))
         return self.price
 
-
-    # @property
-    # def discount_price(self):
-    #     """
-    #     Calculates and returns the discounted price if there is an active discount.
-    #     """
-    #     now = timezone.localtime(timezone.now())
-
-    #     # Get the first active discount for the product.
-    #     discount = self.discounts.filter(
-    #         start_date__lte=now, end_date__gte=now
-    #     ).first()
-
-    #     # If there is an active discount, apply it to the price.
-    #     if discount:
-    #         return discount.apply_discount(self.price)
-    #     return self.price
 
     def __str__(self):
         """
