@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users', # The users app
     'products', # he products apps
     'reviews', # The reviews app
+    'discount', # The discount app
 
 ]
 
@@ -85,7 +86,7 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_api_ecommerce',
+        'NAME': 'api_ecommerce',
         'USER': 'root',
         'PASSWORD': 'ITServ32$',
         'HOST': 'localhost',

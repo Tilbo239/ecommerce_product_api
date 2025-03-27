@@ -49,10 +49,4 @@ class LoginView(generics.CreateAPIView):
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
             },
-            # 'user': {
-            #     'id': user.id,
-            #     'username': user.username,
-            #     'email': user.email,
-            #     # Add other user fields as needed
-            # }
         }, status=status.HTTP_200_OK)
