@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'products', # he products apps
     'reviews', # The reviews app
     'discount', # The discount app
+    'orders', # The orders app
 
 ]
 
