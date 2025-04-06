@@ -25,10 +25,10 @@ class Order(models.Model):
     )
     created_date = models.DateTimeField(auto_now_add=True)
 
-    @property
-    def total_amount(self):
-        total = sum(item.price for item in self.items.all())
-        return total
+    # @property
+    # def total_amount(self):
+    #     total = sum(item.price for item in self.items.all())
+    #     return total
 
 
 class OrderItem(models.Model):
@@ -39,7 +39,7 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)])
-    price = models.FloatField(validators=[MinValueValidator(0)], default=0)
+    # price = models.FloatField(validators=[MinValueValidator(0)], default=0)
     
     @property
     def item_subtotal(self):
@@ -53,7 +53,7 @@ class OrderItem(models.Model):
         """
 
         if self.product.stock_quantity < self.quantity:
-            raise ValueError("Not enough stock available")
+            raise ValueError("Insufficient stock for this product.")
 
         self.price = self.product.final_price * self.quantity
 
