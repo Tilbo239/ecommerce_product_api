@@ -22,7 +22,7 @@ class ProductViewSet(viewsets.ModelViewSet):
   filter_backends = [DjangoFilterBackend, filters.SearchFilter]
   filterset_fields = ['category', 'stock_quantity', 'price']
   search_fields = ['name', 'category__name']
-  ordering_fields = ['price', 'stock_quantity']
+  # ordering_fields = ['price', 'stock_quantity']
   permission_classes = [IsAuthenticatedOrReadOnly]
 
 #   def get_object(self):
