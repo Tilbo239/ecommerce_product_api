@@ -2,6 +2,7 @@ from rest_framework import serializers
 from reviews.serializers import ReviewSerializer
 from .models import Product, Category, ProductImage
 from discount.serializers import DiscountSerializer
+from discount.models import Discount
 
 
 
@@ -42,7 +43,7 @@ class ProductSerializer(serializers.ModelSerializer):
   reviews = ReviewSerializer(many=True, read_only=True)
   final_price = serializers.SerializerMethodField()
   
-  discount = DiscountSerializer()
+  discount = serializers.PrimaryKeyRelatedField(queryset=Discount.objects.all(), required=False, allow_null=True)
   
 
   

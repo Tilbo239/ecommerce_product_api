@@ -30,7 +30,7 @@ class OrderSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Order
-        fields = ['order_id','user', 'status', 'items', 'products', "total_price", 'created_date']
+        fields = ['order_id','user', 'status', 'items', "total_price", 'created_date']
         # read_only_fields = ['total_amount']
         
     # def get_total_amount(self, obj):

@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+
+# Virtual Environment
+env/
+venv/
+ENV/
+.venv/
+
+# VS Code
+.vscode/
+
+# Django specific
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+.env
+.env.*
+
+# Django Migrations
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
+*/migrations/*.py~
+
+# MySQL/PostgreSQL backups
+*.sql
+*.sqlite3
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Node (if using frontend assets)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# JetBrains (PyCharm etc.)
+.idea/
+

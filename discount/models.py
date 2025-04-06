@@ -8,7 +8,10 @@ class Discount(models.Model):
     The Discount class represents a discount on a product.
     """
 
-    name = models.CharField(max_length=255, unique=True)
+    name = models.CharField(
+        max_length=255, 
+        unique=True
+    )
     percentage = models.FloatField(
         validators=[MinValueValidator(0), MaxValueValidator(100)],
         default=0.00,
